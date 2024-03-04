@@ -1,0 +1,141 @@
+/*----------------------------general------------------------------------*/
+:root{
+    --backgound-color:rgb(32, 28, 28);
+    --text-color:white;
+    --primary-color:rgb(181, 72, 72);
+    --secrondary-color:rgb(163, 111, 75);
+    --border-color:white;
+}
+
+.light-mode{
+    --backgound-color:rgb(255, 240, 240);
+    --text-color:rgb(0, 0, 0);
+    --primary-color:rgb(250, 99, 99);
+    --secrondary-color:rgb(247, 167, 110);
+}
+
+.flex-row{
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row-space-between{
+    display: flex;
+    justify-content:space-between;
+}
+html {
+
+    scroll-behavior: smooth !important;
+}
+
+/*----------------------------header------------------------------------*/
+header{
+    background-color: var(--backgound-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 2.5s;
+    margin-left: 42px;
+    margin-top: 10px;
+    margin-right: 42px;
+    z-index: 999;
+    
+
+}
+header ul{
+    display: flex;
+    width: 75%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+header ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: larger;
+
+}
+
+.header-icons{
+    align-items: center;
+}
+.header-icon{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+header div{
+    display: flex;
+    padding-left: 25px;
+    
+}
+
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+/*----------------------------footer------------------------------------*/
+footer{
+    text-align: center;
+    transition: all 2.5s;
+}
+/*----------------------------body------------------------------------*/
+body {
+    background-color: var(--backgound-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: all 2.5s;
+    
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2.5s;
+}
+
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.stagger-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stagger{
+    transition-delay: calc(200ms * var(--order));
+}
+
+.div-section{
+    text-align: center;
+    width: 75%;
+    height: fit-content;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    
+}
+
