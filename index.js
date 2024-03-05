@@ -29,12 +29,15 @@ colorMode.onclick = function() {
 
     
     if (colorMode.getAttribute("src") =="assets/sun.png") {
-        document.documentElement.style.setProperty('--backgound-color', 'rgb(32, 28, 28)');
+        //dark mode
+        document.documentElement.style.setProperty('--backgound-color', '#201C1C');
         document.documentElement.style.setProperty('--text-color', 'white');
         document.documentElement.style.setProperty('--border-color', 'white');
+        document.documentElement.style.setProperty('--invert','0%');
         colorMode.src = "assets/moon.png";
     }else if (colorMode.getAttribute("src") =="assets/moon.png") {
-        document.documentElement.style.setProperty('--backgound-color', 'white');
+        //light mode
+        document.documentElement.style.setProperty('--backgound-color', '#f6f5f5');
         document.documentElement.style.setProperty('--text-color', 'black');
         document.documentElement.style.setProperty('--border-color', 'black');
         colorMode.src = "assets/sun.png";
@@ -50,3 +53,11 @@ language.onclick = function() {
         language.src = "assets/gb.svg";
     }
 }
+//BG
+function updateBodyHeight() {
+    document.documentElement.style.setProperty('--body-height', `${document.body.offsetHeight}px`);
+}
+
+updateBodyHeight();
+  
+window.addEventListener('resize', updateBodyHeight);
