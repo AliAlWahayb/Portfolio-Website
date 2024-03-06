@@ -53,6 +53,16 @@ language.onclick = function() {
         language.src = "assets/gb.svg";
     }
 }
+//progress bar
+const filled = document.querySelector('.filled');
+
+function progressBar () {
+    filled.style.width = `${((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)}%`
+    requestAnimationFrame(progressBar);
+}
+progressBar();
+
+
 //BG
 function updateBodyHeight() {
     document.documentElement.style.setProperty('--body-height', `${document.body.offsetHeight - 50}px`);
