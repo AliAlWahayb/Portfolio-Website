@@ -14,6 +14,7 @@
     --scale-after:1;
     --rotate-before:-180deg;
     --rotate-after:720deg;
+    --glow-color:#ffffffb3;
 
 
 }
@@ -22,6 +23,7 @@
     --backgound-color:#f6f5f5;
     --text-color:black;
     --border-color:black;
+    --glow-color:#000000b3;
 
 }
 
@@ -121,8 +123,7 @@ footer{
   .bubbles span {
     color: var(--text-color);
     border-radius: 50%;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.5);
-    display: flex; 
+    text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 30px var(--glow-color), 0 0 40px var(--glow-color), 0 0 50px var(--glow-color);    display: flex; 
     align-items: center; 
     justify-content: center; 
     position: relative;
