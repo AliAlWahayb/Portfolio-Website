@@ -25,22 +25,11 @@ hiddenElemnts.forEach(function(Elemnts){
 var colorMode = document.getElementById('dark-mode')
 
 colorMode.onclick = function() {
-
-    
-    if (colorMode.getAttribute("src") =="assets/sun.png") {
-        //dark mode
-        document.documentElement.style.setProperty('--backgound-color', '#201C1C');
-        document.documentElement.style.setProperty('--text-color', 'white');
-        document.documentElement.style.setProperty('--border-color', 'white');
-        document.documentElement.style.setProperty('--glow-color', '#ffffffb3');
-        colorMode.src = "assets/moon.png";
-    }else if (colorMode.getAttribute("src") =="assets/moon.png") {
-        //light mode
-        document.documentElement.style.setProperty('--backgound-color', '#f6f5f5');
-        document.documentElement.style.setProperty('--text-color', 'black');
-        document.documentElement.style.setProperty('--border-color', 'black');
-        document.documentElement.style.setProperty('--glow-color', '#000000b3');
+    document.body.classList.toggle('light-mode');
+    if(document.body.classList.contains('light-mode')){
         colorMode.src = "assets/sun.png";
+    }else{
+        colorMode.src = "assets/moon.png";
     }
 }
 //for language
@@ -77,34 +66,38 @@ function InitRandomBG() {
         const myArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
         const randomString = myArray[Math.floor(Math.random() * myArray.length)];
 
+        const animationArray = ["animate1", "animate2", "animate3", "animate4"];
+        const randomanimation = animationArray[Math.floor(Math.random() * animationArray.length)];
+
         const random_BG_font_size = Math.floor(Math.random() * (48 - 17 + 1)) + 17;
         // document.documentElement.style.setProperty('--BG-font-size',`${random_BG_font_size}px`)
 
-        const random_bubble_number = Math.floor(Math.random() * (37 - 13 + 1)) + 13;
-        element.style.cssText = `--bubble-number: ${random_bubble_number};`;
+        const random_bubble_number = Math.floor(Math.random() * (30 - 8 + 1)) + 8;
+        // element.style.cssText = `--bubble-number: ${random_bubble_number};`;
 
         const dynamicStyle = document.createElement('style');
         dynamicStyle.textContent = `.bubbles span:nth-child(${index + 1})::before { content: "${randomString}";
          font-size: ${random_BG_font_size}px; 
-         }`;
+         animation: ${randomanimation} linear infinite;
+         animation-duration: calc(1250s / ${random_bubble_number});}`;
         document.head.appendChild(dynamicStyle);
     });
 
-    const random_scale_before = Math.random() * (3 - 0.3) + 0.3;
+    const random_scale_before = Math.random() * (1 - 0.3) + 0.3;
     document.documentElement.style.setProperty('--scale-before',random_scale_before)
-    console.log(random_scale_before);
+    // console.log(random_scale_before);
 
-    const random_scale_after = Math.random() * (3 - 0.7) + 0.7;
+    const random_scale_after = Math.random() * (2.1 - 1.1) + 1.1;
     document.documentElement.style.setProperty('--scale-after',random_scale_after)
-    console.log(random_scale_after);
+    // console.log(random_scale_after);
 
-    const random_rotate_before = Math.floor(Math.random() * ((-90) - (-272) + 1)) + (-272);
+    const random_rotate_before = Math.floor(Math.random() * ((-272) - (-90) + 1)) + (-90);
     document.documentElement.style.setProperty('--BG-font-size',`${random_rotate_before}deg`)
-    console.log(random_rotate_before);
+    // console.log(random_rotate_before);
 
-    const random_rotate_after = Math.floor(Math.random() * (720 - (-272) + 1)) + (-272);
+    const random_rotate_after = Math.floor(Math.random() * (720 - (0) + 1)) + (0);
     document.documentElement.style.setProperty('--BG-font-size',`${random_rotate_before}deg`)
-    console.log(random_rotate_after);
+    // console.log(random_rotate_after);
 }
 InitRandomBG()
 
@@ -127,4 +120,23 @@ InitRandomBG()
 //     console.log(animatedSpan)
 //   });
 // });
+
+//body
+
+//projects
+// function expandDiv(element) {
+//     element.classList.toggle("Projects-expanded");
+//     console.log("Projects expanded");
+//     console.log(element);
+// }
+function expandDiv(element) {
+    var containers = document.getElementsByClassName("project");
+    for (var i = 0; i < containers.length; i++) {
+      if (containers[i] === element) {
+        containers[i].classList.toggle("Projects-expanded");
+      } else {
+        containers[i].classList.add("project-hidden");
+      }
+    }
+  }
 
