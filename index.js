@@ -1,7 +1,7 @@
 // for appearing effect
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function (entry) {
-        console.log(entry)
+        // console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }else{
@@ -129,14 +129,29 @@ InitRandomBG()
 //     console.log("Projects expanded");
 //     console.log(element);
 // }
-function expandDiv(element) {
-    var containers = document.getElementsByClassName("project");
-    for (var i = 0; i < containers.length; i++) {
-      if (containers[i] === element) {
-        containers[i].classList.toggle("Projects-expanded");
-      } else {
-        containers[i].classList.add("project-hidden");
+
+
+function expandListItem(element, event) {
+    var listItems = document.getElementsByClassName("project-card");
+  
+    for (var i = 0; i < listItems.length; i++) {
+      if (listItems[i] === element && listItems[i].classList.contains("Project-expanded")) {
+        if (event.target.classList.contains("back-arrow")) {
+          listItems[i].classList.toggle("Project-expanded");
+          listItems[i].classList.toggle("scale-cube");
+          listItems[i].classList.add("back-animation");
+  
+          setTimeout(function (index) {
+            if (listItems[index]) {
+              listItems[index].classList.remove("back-animation");
+            }
+          }, 500, i);
+        }
+      } else if (listItems[i] === element) {
+        listItems[i].classList.toggle("Project-expanded");
+        listItems[i].classList.toggle("scale-cube");
+        
       }
     }
-  }
+}
 
