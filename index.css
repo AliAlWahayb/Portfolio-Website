@@ -103,7 +103,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    transition: all 2.5s;
+    transition: all 1.5s;
     z-index: 999;
 }
 
@@ -172,8 +172,15 @@ header div{
 
 /*----------------------------footer------------------------------------*/
 footer{
-    text-align: center;
-    transition: all 2.5s;
+    padding-left: 30px;
+    color: var(--text-color);
+    text-align: left;
+    transition: all 1.5s;
+}
+
+footer a{
+    color: var(--text-color);
+
 }
 /*----------------------------BGAnimation------------------------------------*/
 .BG {
@@ -252,7 +259,7 @@ body {
     color: var(--text-color);
     padding: 0;
     margin: 0;
-    transition: all 2.5s;
+    transition: all 1.5s;
     
 }
 
@@ -269,12 +276,11 @@ section {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 2.5s;
+    transition: all 1.5s;
 }
 .fast-hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
 }
 
 
@@ -308,6 +314,28 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+}
+
+.icon-links img{
+    filter: invert(var(--invert-number));
+    transition: all 1.5s;
+    margin-left: 25px;
+}
+
+
+
+.cv{
+    margin-top: 10px;
+    display: inline-block;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--text-color);
+    color: var(--backgound-color);
+    border-radius: 10px;
+    border: none;
 }
   
 .small-card {
@@ -336,6 +364,7 @@ section {
 .small-card li,.main-card li {
     margin-bottom: 5px;
     font-size: large;
+    padding: 15px;
 }
 
 .cubes li{
@@ -360,6 +389,7 @@ section {
 
 .project-card{
     width: 25%;
+    transition: scale 1s;
 }
 
 .Project-expanded {
@@ -372,6 +402,7 @@ section {
     right: 10px;
     bottom: 10px;
     cursor:auto;
+
 }
 .Project-expanded:hover {
     cursor:auto;
@@ -406,3 +437,11 @@ section {
     transition: width,height 0s;
 }
 
+.project-image {
+    width: 450px;
+    height: auto;
+}
+
+.DigitalKeysWebsite-logo{
+    filter: invert(var(--invert-number));
+}

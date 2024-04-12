@@ -51,6 +51,17 @@ function progressBar () {
 }
 progressBar();
 
+// Function to handle navigation when clicking on internal links
+function navigateToSection(sectionId) {
+    // Scroll to the desired section
+    document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+    });
+
+    // Prevent the default link behavior
+    event.preventDefault();
+}
+
 
 //BG
 function updateBodyHeight() {

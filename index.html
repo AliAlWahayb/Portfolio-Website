@@ -8,14 +8,14 @@
     <script defer src="index.js"></script>
     <title>Ali AlWahayb</title>
 </head>
-<header class="flex-column" >
+<header class="flex-column">
     <div class="flex-row-space-between div1-header">
         <img class="logo" src="assets/logo.svg" alt="website logo">
         <ul>
-            <li><a href="#About Me">About Me</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#section3">section3</a></li>
-            <li><a href="#section4">section4</a></li>
+            <li><a href="#" onclick="navigateToSection('About Me')">About Me</a></li>
+            <li><a href="#" onclick="navigateToSection('Skills')">Skills</a></li>
+            <li><a href="#" onclick="navigateToSection('Projects')">Projects</a></li>
+            <!-- <li><a href="#" onclick="navigateToSection('Certificates')">Certificates</a></li> -->
         </ul>
         <div class="header-icons">
             <div>
@@ -65,7 +65,7 @@
         </div>
     </section>
 
-    <section class="welcome-name">
+    <section class="welcome-name" id="start">
         <h1>Ali Salman AlWahayb</h1>
         <h2>Portfolio website</h2>
     </section>
@@ -74,30 +74,48 @@
 
 
     <section  id="About Me">
-        <div class="hidden main-card">
+        <div class="hidden main-card flex-column-center">
             <h1 class="stagger hidden">About Me</h1>
             <div class="stagger">
-                <p class="stagger hidden" style="--order: 1;">Hey there! I'm Ali, a passionate and driven Computer Science student at IAU.
-                     Technology has always captivated me, and I'm constantly amazed by its transformative power.
-                      As a full-stack developer, web application enthusiast, and application developer,
-                       I love crafting innovative solutions that make a real impact.</p>
+                <p class="stagger hidden" style="--order: 1;">Hey there! I'm Ali, a passionate and driven 
+                    Computer Science student at IAU. Technology has always captivated me, and I'm constantly 
+                    amazed by its transformative power. As a full-stack developer, web application enthusiast,
+                     and application developer, I love crafting innovative solutions that make a real impact.
+                </p>
             </div>
+            <div class=" stagger hidden flex-row-space-evenly icon-links" style="--order: 2;">
+                <a href="mailto:alialwahayb@outlook.com" title="alialwahayb@outlook.com" target="_blank" class=" stagger hidden" style="--order: 2;"><img src="assets/email-svgrepo-com.svg" alt="Email" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/alialwahayb" title="linkedin.com/in/alialwahayb" target="_blank" class=" stagger hidden" style="--order: 2;"><img src="assets/linkedin-svgrepo-com.svg" alt="Linkedin" width="32" height="32"></a>
+                <a href="https://github.com/AliAlWahayb" title="github.com/AliAlWahayb" target="_blank" class=" stagger hidden" style="--order: 2;"><img src="assets/github-142-svgrepo-com.svg" alt="github" width="32" height="32"></a>
+            </div>
+            <a href="assets/Ali AlWahayb.pdf" target="_blank" class="stagger hidden cv" style="--order: 3;">View my CV</a>
+            
         </div>
     </section>
     <section  id="Skills">
         <div class="hidden main-card">
             <h2 class="stagger hidden" style="--order: 1;">Skills</h2>
             <div class="small-card">
-              <h3 class="stagger hidden" style="--order: 2;">Coding Skills</h3>
+              <h3 class="stagger hidden" style="--order: 2;">Programing Skills</h3>
               <ul class="flex-row-space-evenly">
                 <li class="stagger hidden" style="--order: 1;">Python</li>
-                <li class="stagger hidden" style="--order: 2;">Qt Designer</li>
+                <li class="stagger hidden" style="--order: 2;">Python Qt</li>
                 <li class="stagger hidden" style="--order: 3;">Java</li>
-                <li class="stagger hidden" style="--order: 4;">Figma</li>
+                <li class="stagger hidden" style="--order: 4;">Html & Css</li>
                 <li class="stagger hidden" style="--order: 5;">JavaScript</li>
-                <li class="stagger hidden" style="--order: 6;">Axure</li>
               </ul>
             </div>
+            <div class="small-card">
+                <h3 class="stagger hidden" style="--order: 2;">Technical Skills</h3>
+                <ul class="flex-row-space-evenly">
+                    <li class="stagger hidden" style="--order: 1;">Git & Github</li>
+                    <li class="stagger hidden" style="--order: 2;">Software development</li>
+                    <li class="stagger hidden" style="--order: 3;">Operating Systems Linux</li>
+                    <li class="stagger hidden" style="--order: 4;">SQL & Database</li>
+                    <li class="stagger hidden" style="--order: 5;">Project management</li>
+                    <li class="stagger hidden" style="--order: 6;">Web development</li>
+                </ul>
+              </div>
             <div class="small-card">
               <h3 class="stagger hidden" style="--order: 2;">Soft Skills</h3>
               <ul class="flex-row-space-evenly">
@@ -106,18 +124,111 @@
                 <li class="stagger hidden" style="--order: 3;">Adaptability</li>
                 <li class="stagger hidden" style="--order: 4;">Problem-solving</li>
                 <li class="stagger hidden" style="--order: 5;">Time management</li>
-                <li class="stagger hidden" style="--order: 6;">Emotional intelligence</li>
+                <li class="stagger hidden" style="--order: 6;">Critical thinking</li>
+                <li class="stagger hidden" style="--order: 7;">Creativity</li>
               </ul>
             </div>
           </div>
     </section>
 
-    <section  id="section3">
+    <section  id="Projects">
         <div class="hidden main-card" id="Projects-main-card">
             <h2 class="stagger hidden" style="--order: 1;">Projects</h2>
             <div>
               <ul class="flex-row-space-evenly cubes">
-                <li class="stagger hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                    <div class="flex-column-center collapsed-content">
+                        <img src="assets/Projects/FastAutoClickerOG.png" alt="FastAutoClicker" class="logo">
+                        <p class="stagger hidden" style="--order: 1;">FastAutoClicker</p>
+                    </div>
+                    <div class="flex-column-center expanded-content project-hidden">
+                        <div><img src="assets/Back-Arrow.svg" alt="Back Arrow" class="back-arrow" onclick="expandListItem(this,event)"></div>
+                        <div class="flex-row-space-evenly">
+                            <img src="assets/Projects/FastAutoClicker.jpg" alt="FastAutoClicker" class="stagger hidden project-image" >
+                        </div>
+                        <div class="flex-row">
+                            <p class="stagger hidden" style="--order: 1;">FastAutoClicker is an open-source auto clicker tool that allows users to automate clicking actions on their computer.</p>
+                        </div>
+                        <a href="https://github.com/AliAlWahayb/FastAutoClicker" target="_blank" class="stagger hidden cv" style="--order: 3;">Github Link</a>
+                    </div>
+                </li>
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                    <div class="flex-column-center collapsed-content">
+                        <img src="assets/Projects/PatternRandomizerOG.png" alt="PatternRandomizer" class="logo">
+                        <p class="stagger hidden" style="--order: 1;">PatternRandomizer</p>
+                    </div>
+                    <div class="flex-column-center expanded-content project-hidden">
+                        <div><img src="assets/Back-Arrow.svg" alt="Back Arrow" class="back-arrow" onclick="expandListItem(this,event)"></div>
+                        <div class="flex-row-space-evenly">
+                            <img src="assets/Projects/PatternRandomizer.jpg" alt="PatternRandomizer" class="stagger hidden project-image" >
+                        </div>
+                        <div class="flex-row">
+                            <p class="stagger hidden" style="--order: 1;">This program is designed to simulate Random number keyboard presses. It is primarily intended for randomizing building patterns in Minecraft and sandbox games.</p>
+                        </div>
+                        <a href="https://github.com/AliAlWahayb/PatternRandomizer" target="_blank" class="stagger hidden cv" style="--order: 3;">Github Link</a>
+                    </div>
+                </li>
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                    <div class="flex-column-center collapsed-content">
+                        <img src="assets/Projects/CarStationOG.jpg" alt="CarStation-Figma" class="logo">
+                        <p class="stagger hidden" style="--order: 1;">CarStation-Figma</p>
+                    </div>
+                    <div class="flex-column-center expanded-content project-hidden">
+                        <div><img src="assets/Back-Arrow.svg" alt="Back Arrow" class="back-arrow" onclick="expandListItem(this,event)"></div>
+                        <div class="flex-row-space-evenly">
+                            <img src="assets/Projects/CarStation.jpg" alt="CarStation-Figma" class="stagger hidden project-image" >
+                        </div>
+                        <div class="flex-row">
+                            <p class="stagger hidden" style="--order: 1;">Develop an intuitive and user-friendly mobile application for car services using
+                                Figma.</p>
+                        </div>
+                        <a href="https://www.figma.com/proto/GPkoJZgfL3ZlOoyD4Ujk8S/Car-Station?type=design&t=ZECdYOqBTlfC2lWF-1&scaling=scale-down&page-id=0%3A1&node-id=3-4&starting-point-node-id=3%3A4&mode=design" target="_blank" class="stagger hidden cv" style="--order: 3;">Try Prototype</a>
+                    </div>
+                </li>
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                    <div class="flex-column-center collapsed-content">
+                        <img src="assets/Projects/Hotpital_with_sqlOG.jpg" alt="Hospital Management System" class="logo">
+                        <p class="stagger hidden" style="--order: 1;">Hospital Management System</p>
+                    </div>
+                    <div class="flex-column-center expanded-content project-hidden">
+                        <div><img src="assets/Back-Arrow.svg" alt="Back Arrow" class="back-arrow" onclick="expandListItem(this,event)"></div>
+                        <div class="flex-row-space-evenly">
+                            <img src="assets/Projects/Hotpital_with_sql.jpg" alt="Hospital Management System" class="stagger hidden project-image" >
+                        </div>
+                        <div class="flex-row">
+                            <p class="stagger hidden" style="--order: 1;">Hospital Management System with GUI and Database Integration.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                    <div class="flex-column-center collapsed-content">
+                        <img src="assets/Projects/DigitalKeysWebsiteOG.svg" alt="Digital Keys Website" class="logo DigitalKeysWebsite-logo">
+                        <p class="stagger hidden" style="--order: 1;">Digital Keys Website</p>
+                    </div>
+                    <div class="flex-column-center expanded-content project-hidden">
+                        <div><img src="assets/Back-Arrow.svg" alt="Back Arrow" class="back-arrow" onclick="expandListItem(this,event)"></div>
+                        <div class="flex-row-space-evenly">
+                            <img src="assets/Projects/DigitalKeysWebsite.jpg" alt="Digital Keys Website" class="stagger hidden project-image" >
+                        </div>
+                        <div class="flex-row">
+                            <p class="stagger hidden" style="--order: 1;">A robust web-based platform designed for the sale of digital keys, offering
+                                customers a seamless and secure purchasing experience.</p>
+                        </div>
+                    </div>
+                </li>
+
+
+              </ul>
+            </div>
+          </div>
+    </section>
+
+    <!-- <section  id="Certificates">
+        <div class="hidden main-card" id="Projects-main-card">
+            <h2 class="stagger hidden" style="--order: 1;">Certificates</h2>
+            <div>
+              <ul class="flex-row-space-evenly cubes">
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
                     <div class="flex-column-center collapsed-content">
                         <img src="assets/logo.svg" alt="" class="logo">
                         <p class="stagger hidden" style="--order: 1;">1</p>
@@ -136,7 +247,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="stagger hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
                     <div class="flex-column-center collapsed-content">
                         <img src="assets/logo.svg" alt="" class="logo">
                         <p class="stagger hidden" style="--order: 1;">1</p>
@@ -155,7 +266,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="stagger hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
                     <div class="flex-column-center collapsed-content">
                         <img src="assets/logo.svg" alt="" class="logo">
                         <p class="stagger hidden" style="--order: 1;">1</p>
@@ -174,7 +285,26 @@
                         </div>
                     </div>
                 </li>
-                <li class="stagger hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                <li class=" hidden  flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 0;">
+                    <div class="flex-column-center collapsed-content">
+                        <img src="assets/logo.svg" alt="" class="logo">
+                        <p class="stagger hidden" style="--order: 1;">ttt</p>
+                    </div>
+                    <div class="flex-column-center expanded-content project-hidden">
+                        <div><img src="assets/Back-Arrow.svg" alt="Back Arrow" class="back-arrow" onclick="expandListItem(this,event)"></div>
+                        <div class="flex-row-space-evenly">
+                            <img src="assets/logo.svg" alt="" class="logo stagger hidden">
+                            <img src="assets/logo.svg" alt="" class="logo stagger hidden">
+                            <img src="assets/logo.svg" alt="" class="logo stagger hidden">
+                        </div>
+                        <div class="flex-row">
+                            <p class="stagger hidden" style="--order: 1;">123456789123456789</p>
+                            <p class="stagger hidden" style="--order: 1;">adwasdwadsdwadsdwasdw</p>
+                            <p class="stagger hidden" style="--order: 1;">123456789123456789</p>
+                        </div>
+                    </div>
+                </li>
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
                     <div class="flex-column-center collapsed-content">
                         <img src="assets/logo.svg" alt="" class="logo">
                         <p class="stagger hidden" style="--order: 1;">1</p>
@@ -193,26 +323,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="stagger hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
-                    <div class="flex-column-center collapsed-content">
-                        <img src="assets/logo.svg" alt="" class="logo">
-                        <p class="stagger hidden" style="--order: 1;">1</p>
-                    </div>
-                    <div class="flex-column-center expanded-content project-hidden">
-                        <div><img src="assets/Back-Arrow.svg" alt="Back Arrow" class="back-arrow" onclick="expandListItem(this,event)"></div>
-                        <div class="flex-row-space-evenly">
-                            <img src="assets/logo.svg" alt="" class="logo stagger hidden">
-                            <img src="assets/logo.svg" alt="" class="logo stagger hidden">
-                            <img src="assets/logo.svg" alt="" class="logo stagger hidden">
-                        </div>
-                        <div class="flex-row">
-                            <p class="stagger hidden" style="--order: 1;">123456789123456789</p>
-                            <p class="stagger hidden" style="--order: 1;">adwasdwadsdwadsdwasdw</p>
-                            <p class="stagger hidden" style="--order: 1;">123456789123456789</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="stagger hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
+                <li class=" hidden flex-column-center project-card scale-cube" onclick="expandListItem(this,event)" style="--order: 1;">
                     <div class="flex-column-center collapsed-content">
                         <img src="assets/logo.svg" alt="" class="logo">
                         <p class="stagger hidden" style="--order: 1;">1</p>
@@ -235,35 +346,14 @@
               </ul>
             </div>
           </div>
-    </section>
-
-    <section id="section4">
-        <div class="main-card">
-            <h2>Main Card</h2>
-            <div class="small-card">
-              <h3>Skills</h3>
-              <ul>
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
-              </ul>
-            </div>
-            <div class="small-card">
-              <h3>Projects</h3>
-              <ul>
-                <li>Project 1</li>
-                <li>Project 2</li>
-                <li>Project 3</li>
-              </ul>
-            </div>
-          </div>
-    </section>
+    </section> -->
 
     
     
 </body>
-<footer class="hidden">
-    <h1>this is a footer</h1>
+<footer class="footer">
+    <h3>Copyright © 2024 AliAlWahayb - All right reserved. <a href="#" onclick="navigateToSection('start')">Back to the top</a></h3>
+    
 
 </footer>
 </html>
