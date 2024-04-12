@@ -103,7 +103,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    transition: all 2.5s;
+    transition: all 1.5s;
     z-index: 999;
 }
 
@@ -173,7 +173,7 @@ header div{
 /*----------------------------footer------------------------------------*/
 footer{
     text-align: center;
-    transition: all 2.5s;
+    transition: all 1.5s;
 }
 /*----------------------------BGAnimation------------------------------------*/
 .BG {
@@ -252,7 +252,7 @@ body {
     color: var(--text-color);
     padding: 0;
     margin: 0;
-    transition: all 2.5s;
+    transition: all 1.5s;
     
 }
 
@@ -269,7 +269,7 @@ section {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 2.5s;
+    transition: all 1.5s;
 }
 .fast-hidden {
     opacity: 0;
