@@ -172,8 +172,15 @@ header div{
 
 /*----------------------------footer------------------------------------*/
 footer{
-    text-align: center;
+    padding-left: 30px;
+    color: var(--text-color);
+    text-align: left;
     transition: all 1.5s;
+}
+
+footer a{
+    color: var(--text-color);
+
 }
 /*----------------------------BGAnimation------------------------------------*/
 .BG {
@@ -307,6 +314,28 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+}
+
+.icon-links img{
+    filter: invert(var(--invert-number));
+    transition: all 1.5s;
+    margin-left: 25px;
+}
+
+
+
+.cv{
+    margin-top: 10px;
+    display: inline-block;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--text-color);
+    color: var(--backgound-color);
+    border-radius: 10px;
+    border: none;
 }
   
 .small-card {
@@ -335,6 +364,7 @@ section {
 .small-card li,.main-card li {
     margin-bottom: 5px;
     font-size: large;
+    padding: 15px;
 }
 
 .cubes li{
@@ -407,3 +437,11 @@ section {
     transition: width,height 0s;
 }
 
+.project-image {
+    width: 450px;
+    height: auto;
+}
+
+.DigitalKeysWebsite-logo{
+    filter: invert(var(--invert-number));
+}
