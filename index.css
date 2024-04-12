@@ -445,3 +445,55 @@ section {
 .DigitalKeysWebsite-logo{
     filter: invert(var(--invert-number));
 }
+
+@media (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    
+    header ul {
+      width: 100%;
+    }
+    
+    .main-card,
+    .small-card,
+    .project-card {
+      width: 90%;
+    }
+    
+    .welcome-name {
+      font-size: medium;
+    }
+    
+    .small-card li,
+    .main-card li {
+      font-size: medium;
+      padding: 10px;
+    }
+    
+    .flex-row-space-evenly {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .flex-column-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .BG {
+      display: none;
+    }
+    
+    .Project-expanded .collapsed-content {
+      display: block;
+    }
+    
+    .Project-expanded .expanded-content {
+      display: none;
+    }
+    .back-arrow {
+        display: none;
+    }
+  }
