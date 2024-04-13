@@ -453,7 +453,19 @@ section {
       width: 100%;
     }
     
-    .main-card,
+    header ul li a{
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: medium;
+        padding-left: 25px;
+    
+    }
+
+    .logo{
+        width: 5vh;
+    
+    }
+    
     .small-card,
     .project-card {
       width: 90%;
@@ -482,9 +494,9 @@ section {
       align-items: center;
     }
     
-    .BG {
+    /* .BG {
       display: none;
-    }
+    } */
     
     .Project-expanded .collapsed-content {
       display: block;
@@ -495,5 +507,27 @@ section {
     }
     .back-arrow {
         display: none;
+    }
+
+    .project-image {
+        width: 250px;
+        height: auto;
+    }
+
+    .scale-cube:hover{
+        scale: 1;
+    }
+
+    .cv{
+        margin-top: 10px;
+        display: inline-block;
+        width: 30%;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        background-color: var(--text-color);
+        color: var(--backgound-color);
+        border-radius: 10px;
+        border: none;
     }
   }
