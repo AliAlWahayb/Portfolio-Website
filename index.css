@@ -485,13 +485,10 @@ section {
     .welcome-name {
         font-size: medium;
     }
-    /* .welcome-name h1 {
-        font-size: large;
-      }
 
-    .welcome-name h2 {
-        font-size: medium;
-    } */
+    .stagger{
+        transition-delay: calc(200ms * 1);
+    }
     
     .small-card li,
     .main-card li {
@@ -516,7 +513,7 @@ section {
       display: none;
     }
     
-    .Project-expanded .collapsed-content {
+    .collapsed-content {
       display: block;
     }
     
@@ -528,7 +525,7 @@ section {
     }
 
     .project-image {
-        width: 250px;
+        width: 200px;
         height: auto;
     }
 

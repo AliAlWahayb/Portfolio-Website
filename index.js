@@ -143,6 +143,9 @@ InitRandomBG()
 
 
 function expandListItem(element, event) {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        return;
+    }
     var listItems = document.getElementsByClassName("project-card");
   
     for (var i = 0; i < listItems.length; i++) {
@@ -161,7 +164,6 @@ function expandListItem(element, event) {
       } else if (listItems[i] === element) {
         listItems[i].classList.toggle("Project-expanded");
         listItems[i].classList.toggle("scale-cube");
-        
       }
     }
 }
