@@ -5,12 +5,12 @@ const observer = new IntersectionObserver(function(entries) {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }else{
-            entry.target.classList.remove('show');
+            // entry.target.classList.remove('show');
         }
     });
     },{
         threshold: [0.2, 1],
-        rootMargin: "100px"
+        rootMargin: "120px"
     }
 );
 
