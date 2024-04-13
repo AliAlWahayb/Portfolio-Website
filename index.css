@@ -448,9 +448,8 @@ section {
 
 @media (max-width: 768px) {
     /* Styles for screens up to 768px wide */
-    
     header ul {
-      width: 100%;
+      width: 50%;
     }
     
     header ul li a{
@@ -459,6 +458,9 @@ section {
         font-size: medium;
         padding-left: 25px;
     
+    }
+    .div1-header{
+        padding-left: 5px;
     }
 
     .logo{
@@ -494,9 +496,9 @@ section {
       align-items: center;
     }
     
-    /* .BG {
+    .BG {
       display: none;
-    } */
+    }
     
     .Project-expanded .collapsed-content {
       display: block;
@@ -531,3 +533,10 @@ section {
         border: none;
     }
   }
+
+  /* @media (max-width: 440px) {
+    .logo{
+        width: 5vh;
+    
+    }
+  } */
