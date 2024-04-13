@@ -482,14 +482,16 @@ section {
       width: 90%;
     }
     
-
-    .welcome-name h1 {
+    .welcome-name {
+        font-size: medium;
+    }
+    /* .welcome-name h1 {
         font-size: large;
       }
 
     .welcome-name h2 {
         font-size: medium;
-    }
+    } */
     
     .small-card li,
     .main-card li {
