@@ -445,3 +445,89 @@ section {
 .DigitalKeysWebsite-logo{
     filter: invert(var(--invert-number));
 }
+
+@media (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    
+    header ul {
+      width: 100%;
+    }
+    
+    header ul li a{
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: medium;
+        padding-left: 25px;
+    
+    }
+
+    .logo{
+        width: 5vh;
+    
+    }
+    
+    .small-card,
+    .project-card {
+      width: 90%;
+    }
+    
+    .welcome-name {
+      font-size: medium;
+    }
+    
+    .small-card li,
+    .main-card li {
+      font-size: medium;
+      padding: 10px;
+    }
+    
+    .flex-row-space-evenly {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .flex-column-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* .BG {
+      display: none;
+    } */
+    
+    .Project-expanded .collapsed-content {
+      display: block;
+    }
+    
+    .Project-expanded .expanded-content {
+      display: none;
+    }
+    .back-arrow {
+        display: none;
+    }
+
+    .project-image {
+        width: 250px;
+        height: auto;
+    }
+
+    .scale-cube:hover{
+        scale: 1;
+    }
+
+    .cv{
+        margin-top: 10px;
+        display: inline-block;
+        width: 30%;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        background-color: var(--text-color);
+        color: var(--backgound-color);
+        border-radius: 10px;
+        border: none;
+    }
+  }
