@@ -499,6 +499,13 @@ section {
         font-size: medium;
     }
 
+    .hidden {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 0.5s;
+    }
+
     .stagger{
         transition-delay: 1ms;
     }
