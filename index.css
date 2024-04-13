@@ -489,6 +489,14 @@ section {
     .stagger{
         transition-delay: calc(200ms * 1);
     }
+
+    #Skills{
+        margin-bottom: 250px;
+    }
+
+    .project-card{
+        width:fit-content;
+    }
     
     .small-card li,
     .main-card li {
