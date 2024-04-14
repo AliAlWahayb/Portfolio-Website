@@ -590,3 +590,17 @@ section {
         border: none;
     }
   }
+
+/* Safari text-shadow fix */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-text-stroke: 0.001px) {
+        .welcome-name {
+            margin-top: -130px;
+            color: var(--text-color);
+            text-transform: uppercase;
+            text-shadow: none;
+            -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+            font-size: medium;
+        }
+    }
+  }
