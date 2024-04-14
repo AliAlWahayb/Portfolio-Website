@@ -3,7 +3,7 @@
     --primary-color:rgb(181, 72, 72);
     --secrondary-color:rgb(163, 111, 75);
     --backgound-color:#141416;
-    --text-color:white;
+    --text-color:rgb(255, 255, 255);
     --border-color:white;
     --selections-color:#7a7a7a;
     --invert-number:0%;
@@ -29,7 +29,7 @@
     --primary-color:rgb(247, 103, 103);
     --secrondary-color:rgb(251, 172, 115);
     --backgound-color:#ebebe9;
-    --text-color:black;
+    --text-color:rgb(0, 0, 0);
     --border-color:black;
     --selections-color:#858585;
     --invert-number:100%;
