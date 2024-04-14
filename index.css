@@ -590,3 +590,13 @@ section {
         border: none;
     }
   }
+
+  @media only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .welcome-name {
+        margin-top: -130px;
+        color: red;
+        text-transform: uppercase;
+        text-shadow: none;
+        font-size: medium;
+    }
+  }
