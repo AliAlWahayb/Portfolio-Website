@@ -497,7 +497,7 @@ section {
     
     .welcome-name {
         margin-top: -130px;
-        color: var(--text-color);
+        color: red;
         text-transform: uppercase;
         text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color);
         font-size: medium;
