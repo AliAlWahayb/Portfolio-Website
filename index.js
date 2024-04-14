@@ -132,3 +132,11 @@ window.addEventListener("load", function() {
     var splashScreen = document.getElementById("splash-screen");
     splashScreen.style.display = "none"; // Hide the splash screen when the page loads
 });
+
+var isIOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+
+if (isIOS) {
+  var element = document.getElementById("start");
+  element.classList.remove("welcome-name");
+  element.classList.add("welcome-name-ios");
+}

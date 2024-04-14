@@ -503,6 +503,14 @@ section {
         font-size: medium;
     }
 
+    .welcome-name-ios {
+        margin-top: -130px;
+        color: red;
+        text-transform: uppercase;
+        text-shadow: none;
+        font-size: medium;
+    }
+
     .hidden {
         opacity: 0;
         filter: blur(5px);
@@ -591,12 +599,3 @@ section {
     }
   }
 
-  @media only screen and (max-device-width: 768px) and (-webkit-touch-callout: none) {
-    .welcome-name {
-        margin-top: -130px;
-        color: var(--text-color);
-        text-transform: uppercase;
-        text-shadow: none;
-        font-size: medium;
-    }
-  }
