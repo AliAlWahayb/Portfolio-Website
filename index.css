@@ -591,7 +591,7 @@ section {
     }
   }
 
-  @media only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  @media only screen and (max-device-width: 768px) and (-webkit-touch-callout: none) {
     .welcome-name {
         margin-top: -130px;
         color: var(--text-color);
